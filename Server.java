@@ -96,7 +96,6 @@ public class Server {
         buffer.flip();
         activeSocket.write(buffer);
 
-        //activeSocket.close();
         activeSocket.register(this.selector,SelectionKey.OP_READ,buffer);
     }
 
